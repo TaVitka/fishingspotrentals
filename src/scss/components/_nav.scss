@@ -1,0 +1,100 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px clamp(16px, 4.5vw, 64px);
+  background-color: var(--color-white);
+  border-radius: var(--radius-main);
+  box-shadow: var(--shadow-primary);
+
+  .logo {
+    max-width: fit-content;
+    width: 100%;
+    margin-right: 24px;
+
+    @include media(tablet) {
+      max-width: 200px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    @include media(tablet) {
+      position: fixed;
+      left: 0;
+      top: 0;
+      //top: calc(var(--header-height) * 1);
+      z-index: -1;
+      flex-direction: column;
+      justify-content: flex-start;
+      overflow-y: auto;
+      padding: calc((var(--header-height) * 1) + 30px) 16px 30px 16px;
+      width: 100%;
+      height: calc(var(--vh));
+      background-color: var(--color-white);
+      transform: translateX(150%);
+      transition-property: transform;
+      transition-duration: 0.4s;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    margin: 0 clamp(16px, 2.5vw, 34px) 0 0;
+
+    @include media(tablet) {
+      z-index: -1;
+      flex-direction: column;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-right: clamp(16px, 2vw, 24px);
+
+      @include media(tablet) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__link {
+    text-transform: capitalize;
+    transition: color 0.3s ease-in-out;
+    font-size: 16px;
+    line-height: 1.21;
+    font-weight: var(--fw-400);
+    color: var(--color-dark);
+    white-space: nowrap;
+
+    &.true,
+    &:hover {
+      color: var(--color-blue-400);
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include media(tablet) {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+  @include media(tablet-wide) {
+    padding: 10px;
+  }
+}
