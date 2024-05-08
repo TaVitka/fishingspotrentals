@@ -47,4 +47,9 @@
   &--centered {
     margin-inline: auto;
   }
+
+  &--send {
+    text-transform: initial;
+    padding: 14px 23px;
+  }
 }

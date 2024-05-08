@@ -28,7 +28,15 @@
 
   &--discover {
     #{$root}__info {
-      gap: clamp(24px, 3.4vw, 50px)
+      gap: clamp(24px, 3.4vw, 50px);
+    }
+  }
+
+  &--accent {
+    background-color: var(--color-blue-400);
+
+    #{$root}__title {
+      color: var(--color-white);
     }
   }
 }
