@@ -4,7 +4,6 @@
 h1,
 h2,
 h3 {
-  width: fit-content;
   font-weight: var(--fw-600);
   overflow: hidden;
 
@@ -24,7 +23,7 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(26px, 3vi, 40px);
+  font-size: clamp(26px, 2.8vi, 40px);
   color: var(--color-dark);
 }
 

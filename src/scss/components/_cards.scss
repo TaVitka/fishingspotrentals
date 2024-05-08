@@ -1,0 +1,38 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.cards {
+  $root: &;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 24px;
+
+  &__item {
+    overflow: hidden;
+    border-radius: var(--radius-main);
+  }
+
+  &__content {
+    @include flex-all-sb;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+    text-align: center;
+
+    h3 {
+      color: var(--color-blue-900);
+    }
+
+    p {
+      color: var(--color-dark);
+    }
+  }
+
+  &--colored {
+    #{$root}__item {
+      background-color: var(--color-blue-100);
+    }
+  }
+}

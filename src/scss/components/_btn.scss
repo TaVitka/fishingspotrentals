@@ -36,7 +36,15 @@
     }
   }
 
-  &--large {
+  &--l {
     padding: 18px 23px;
+  }
+
+  &--xl {
+    padding: 18px 32px;
+  }
+
+  &--centered {
+    margin-inline: auto;
   }
 }
