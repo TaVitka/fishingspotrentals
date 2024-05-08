@@ -91,4 +91,14 @@ textarea {
   &:not(a) {
     font-family: var(--font-family-secondary);
   }
+
+  br {
+    display: none;
+  }
+
+  @include media(mobile-m) {
+    br {
+      display: block;
+    }
+  }
 }

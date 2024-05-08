@@ -3,8 +3,10 @@
 @use "../utils/mixins/"as*;
 
 .opened {
-  .nav__inner {
-    transform: translateX(0);
+  &.nav:not(.nav--footer) {
+    .nav__inner {
+      transform: translateX(0);
+    }
   }
 
   span {
