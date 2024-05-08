@@ -42,3 +42,15 @@ body {
   grid-template-rows: 1fr auto;
   min-height: var(--vh);
 }
+
+.overlay {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background: var(--gradient-main);
+  }
+}

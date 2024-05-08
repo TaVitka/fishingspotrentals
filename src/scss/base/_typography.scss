@@ -19,7 +19,7 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(32px, 3vi, 56px);
+  font-size: clamp(32px, 4vi, 56px);
   color: var(--color-blue-900);
 }
 
@@ -37,6 +37,11 @@ h3 {
 .text {
   font-size: 14px;
   line-height: 1.6;
+}
+
+.desc {
+  font-family: var(--font-family-secondary);
+  font-size: clamp(18px, 2vi, 20px);
 }
 
 .accent,
