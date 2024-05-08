@@ -45,7 +45,7 @@ h3 {
 
 .accent,
 a:not(.nav__link, .btn, .copyright) {
-  color: var(--color-var-blue-400);
+  color: var(--color-blue-400);
 }
 
 a,
@@ -63,6 +63,12 @@ a:not(.nav__link, .btn, .copyright) {
     text-decoration: underline;
     text-underline-offset: 3px;
     color: var(--color-blue-700);
+  }
+
+  &.more {
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-underline-offset: 3px;
   }
 }
 
