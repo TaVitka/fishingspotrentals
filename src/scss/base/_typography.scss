@@ -1,0 +1,84 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+h1,
+h2,
+h3 {
+  width: fit-content;
+  font-weight: var(--fw-600);
+  overflow: hidden;
+
+  span {
+    color: var(--color-blue-400);
+  }
+}
+
+h1,
+h2 {
+  line-height: 1.21;
+}
+
+h1 {
+  font-size: clamp(32px, 3vi, 56px);
+  color: var(--color-blue-900);
+}
+
+h2 {
+  font-size: clamp(26px, 3vi, 40px);
+  color: var(--color-dark);
+}
+
+h3 {
+  font-size: clamp(20px, 3vi, 24px);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.text {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.accent,
+a:not(.nav__link, .btn, .copyright) {
+  color: var(--color-var-blue-400);
+}
+
+a,
+button {
+  display: block;
+  width: fit-content;
+  overflow: hidden;
+}
+
+a:not(.nav__link, .btn, .copyright) {
+  transition: color 0.4s ease-in-out;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    color: var(--color-blue-700);
+  }
+}
+
+input,
+textarea {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--color-blue-400);
+
+  &::placeholder {
+    color: var(--color-blue-764);
+  }
+}
+
+.copyright {
+  font-size: 16px;
+  line-height: 1.17;
+  color: var(--color-white);
+
+  &:not(a) {
+    font-family: var(--font-family-secondary);
+  }
+}
