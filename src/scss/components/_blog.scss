@@ -20,6 +20,7 @@
     line-height: 1;
     font-weight: var(--fw-500);
     color: var(--color-dark-600);
+    transition: color 0.4s ease-in-out;
 
     &::before {
       @include cover-background;
@@ -31,6 +32,16 @@
       height: 18px;
       transform: translateY(-50%);
       background-image: url("../images/icons/back-icon.svg");
+      filter: none;
+      transition: filter 0.4s ease-in-out;
+    }
+
+    &:hover {
+      color: var(--color-blue-400);
+    }
+
+    &:hover::before {
+      filter: brightness(0) saturate(100%) invert(24%) sepia(96%) saturate(1717%) hue-rotate(175deg) brightness(90%) contrast(102%);
     }
   }
 

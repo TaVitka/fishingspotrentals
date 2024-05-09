@@ -46,7 +46,7 @@ h3,
 }
 
 .accent,
-a:not(.nav__link, .btn, .copyright) {
+a:not(.nav__link, .btn, .copyright, .blog__back) {
   color: var(--color-blue-400);
 }
 
@@ -57,20 +57,22 @@ button {
   overflow: hidden;
 }
 
-a:not(.nav__link, .btn, .copyright) {
-  transition: color 0.4s ease-in-out;
-
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    color: var(--color-blue-700);
-  }
-
+a {
   &.more {
     text-decoration: underline;
     text-transform: capitalize;
     text-underline-offset: 3px;
+  }
+
+  &:not(.nav__link, .btn, .copyright, .blog__back) {
+    transition: color 0.4s ease-in-out;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      color: var(--color-blue-700);
+    }
   }
 }
 
