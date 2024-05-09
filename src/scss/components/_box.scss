@@ -2,6 +2,7 @@
 @use "../utils/mixins"as*;
 
 .box {
+  $root: &;
   @include flex-all-sb;
   gap: 24px;
 
@@ -13,6 +14,11 @@
   &__title {
     margin-bottom: 24px;
     font-size: clamp(26px, 3.4vi, 48px);
+  }
+
+  &__desc {
+    margin-bottom: clamp(24px, 2.3vw, 32px);
+    font-family: var(--font-family-secondary);
   }
 
   &__items {
@@ -36,5 +42,15 @@
 
   img {
     border-radius: var(--radius-m);
+  }
+
+  &--wide {
+    #{$root}__content {
+      max-width: 699px;
+    }
+
+    #{$root}__title {
+      margin-bottom: clamp(24px, 2.3vw, 32px);
+    }
   }
 }
