@@ -11,8 +11,8 @@
     flex-direction: column;
     justify-content: center;
     overflow: hidden;
-    min-height: 726px;
-    padding: clamp(0px, 7.3vw, 104px) 0 0;
+    min-height: clamp(450px, 50.4vw, 726px);
+    padding-top: var(--header-height);
   }
 
   &__content {
@@ -30,6 +30,15 @@
     }
   }
 
-  &--home {
+  @include media(tablet) {
+      &__content {
+        width: 50%;
+      }
+  }
+
+  @include media(mobile-l) {
+    &__content {
+      width: 100%;
+    }
   }
 }

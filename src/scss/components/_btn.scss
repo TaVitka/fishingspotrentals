@@ -52,4 +52,10 @@
     text-transform: initial;
     padding: 14px 23px;
   }
+
+  @include media(mobile-l) {
+    &--send {
+      width: 100%;
+    }
+  }
 }

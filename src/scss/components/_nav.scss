@@ -8,68 +8,10 @@
   align-items: center;
   justify-content: space-between;
 
-  &:not(&--footer) {
-    padding: 16px clamp(16px, 4.5vw, 64px);
-    background-color: var(--color-white);
-    border-radius: var(--radius-main);
-    box-shadow: var(--shadow-primary);
-
-    @include media(tablet-wide) {
-      padding: 10px;
-    }
-
-    #{$root}__inner {
-      @include media(tablet) {
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        flex-direction: column;
-        justify-content: flex-start;
-        overflow-y: auto;
-        padding: calc((var(--header-height) * 1) + 30px) 16px 30px 16px;
-        width: 100%;
-        height: calc(var(--vh));
-        background-color: var(--color-white);
-        transform: translateX(150%);
-        transition-property: transform;
-        transition-duration: 0.4s;
-      }
-    }
-
-    #{$root}__list {
-      @include media(tablet) {
-        z-index: -1;
-        flex-direction: column;
-        margin: 0 0 30px 0;
-      }
-    }
-
-    #{$root}__item {
-      &:not(:last-of-type) {
-        @include media(tablet) {
-          margin-right: 0;
-          margin-bottom: 30px;
-        }
-      }
-    }
-
-    #{$root}__btns {
-      @include media(tablet) {
-        flex-direction: column;
-        gap: 30px;
-      }
-    }
-  }
-
   .logo {
     max-width: fit-content;
     width: 100%;
     margin-right: 24px;
-
-    @include media(tablet) {
-      max-width: 200px;
-    }
   }
 
   &__inner {
@@ -82,6 +24,10 @@
     display: flex;
     align-items: center;
     margin: 0 clamp(16px, 2.5vw, 34px) 0 0;
+
+    @include media(tablet) {
+      margin: 0 0 30px 0;
+    }
   }
 
   &__item {
@@ -109,5 +55,87 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  &:not(&--footer) {
+    padding: 16px clamp(16px, 4.5vw, 64px);
+    background-color: var(--color-white);
+    border-radius: var(--radius-main);
+    box-shadow: var(--shadow-primary);
+
+    @include media(tablet-wide) {
+      padding: 10px;
+    }
+
+    .logo {
+      @include media(tablet) {
+        max-width: 200px;
+      }
+
+    }
+
+    #{$root}__inner {
+      @include media(tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+        padding: calc((var(--header-height) * 1) + 30px) 16px 30px 16px;
+        width: 100%;
+        height: calc(var(--vh));
+        background-color: var(--color-white);
+        transform: translateX(150%);
+        transition-property: transform;
+        transition-duration: 0.4s;
+      }
+    }
+
+    #{$root}__list {
+      @include media(tablet) {
+        z-index: -1;
+        flex-direction: column;
+      }
+    }
+
+    #{$root}__item {
+      &:not(:last-of-type) {
+        @include media(tablet) {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+      }
+    }
+
+    #{$root}__btns {
+      @include media(tablet) {
+        flex-direction: column;
+        gap: 30px;
+      }
+    }
+  }
+
+  @include media(tablet) {
+    &--footer {
+      flex-direction: column;
+      justify-content: center;
+
+      .logo {
+        margin-right: 0;
+        margin-bottom: 24px;
+      }
+
+      #{$root}__inner {
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      #{$root}__list,
+      #{$root}__btns {
+        justify-content: center;
+      }
+    }
   }
 }
