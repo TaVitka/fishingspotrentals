@@ -49,6 +49,10 @@ body {
 
   &--large {
     max-width: var(--container-large);
+
+    @include media(tablet) {
+      max-width: var(--container-width);
+    }
   }
 }
 

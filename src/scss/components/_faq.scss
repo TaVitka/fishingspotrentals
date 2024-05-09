@@ -79,8 +79,7 @@
     }
 
     summary {
-      padding: 16px rem(44) 16px 16px;
-      font-size: 18px;
+      line-height: 1.6;
 
       &::before {
         top: 16px;
@@ -91,7 +90,7 @@
     details {
       &[open] {
         summary + div {
-          padding: 0 16px 16px;
+          padding-right: 16px;
         }
       }
     }

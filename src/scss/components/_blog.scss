@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: repeat(2, auto);
     align-items: flex-start;
-    gap: 40px;
+    gap: clamp(16px, 3vw, 40px);
     margin-bottom: clamp(24px, 3.4vw, 48px);
   }
 
@@ -49,7 +49,7 @@
     width: 76%;
     font-weight: var(--fw-700);
     color: var(--color-black);
-    font-size: clamp(32px, 3vi, 36px);
+    font-size: clamp(26px, 3vi, 36px);
   }
 
   &__img {
@@ -69,6 +69,34 @@
       line-height: 1.21;
       color: var(--color-dark-600);
       letter-spacing: 0.02em;
+    }
+  }
+
+  @include media(mobile-l) {
+    h1 {
+      width: 100%;
+    }
+
+    &__back {
+      padding-left: 34px;
+
+      &::before {
+        left: 0;
+      }
+    }
+
+    &__img {
+      border-radius: var(--radius-main);
+    }
+  }
+
+  @include media(mobile-s) {
+    &__nav {
+      grid-template-columns: 1fr;
+    }
+
+    &__img {
+      aspect-ratio: 1 / 1;
     }
   }
 }

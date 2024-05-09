@@ -138,4 +138,13 @@
       }
     }
   }
+
+  @include media(mobile-m) {
+    &--footer {
+      #{$root}__list {
+        flex-wrap: wrap;
+        gap: 24px;
+      }
+    }
+  }
 }

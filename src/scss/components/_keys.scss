@@ -3,7 +3,7 @@
 
 .keys {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
   gap: clamp(32px, 4.5vw, 64px) clamp(12px, 2.3vw, 32px);
 
@@ -65,5 +65,9 @@
         background-size: 50%;
       }
     }
+  }
+
+  @include media(mobile-m) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

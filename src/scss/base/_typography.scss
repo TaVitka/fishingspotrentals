@@ -101,6 +101,7 @@ textarea {
   }
 
   @include media(mobile-m) {
+    line-height: 1.6;
     br {
       display: block;
     }
