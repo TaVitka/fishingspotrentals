@@ -3,9 +3,9 @@
 
 .keys {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, auto);
   grid-auto-rows: 1fr;
-  gap: clamp(32px, 4.5vw, 64px) 32px;
+  gap: clamp(32px, 4.5vw, 64px) clamp(12px, 2.3vw, 32px);
 
   &__item {
     position: relative;
@@ -48,6 +48,22 @@
 
     &--teamwork::before {
       background-image: url("../images/icons/teamwork-icon.svg");
+    }
+
+    .title {
+      font-size: clamp(16px, 2vi, 24px);
+    }
+  }
+
+  @include media(mobile-m) {
+    &__item {
+      padding-top: 80px;
+
+      &::before {
+        width: 62px;
+        height: 62px;
+        background-size: 50%;
+      }
     }
   }
 }

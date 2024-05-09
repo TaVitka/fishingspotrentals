@@ -24,7 +24,7 @@
   &__items {
     li {
       &:not(:last-of-type) {
-        margin-bottom: 32px;
+        margin-bottom: clamp(16px, 2.3vw, 32px);
       }
 
       p {
@@ -51,6 +51,24 @@
 
     #{$root}__title {
       margin-bottom: clamp(24px, 2.3vw, 32px);
+    }
+  }
+
+  @include media(tablet) {
+    flex-direction: column;
+
+    &__content {
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &--journey {
+      img {
+        aspect-ratio: 3/2;
+      }
     }
   }
 }
