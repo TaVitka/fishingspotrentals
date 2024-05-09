@@ -24,7 +24,7 @@
     padding: 24px;
     text-align: center;
 
-    h3 {
+    h3:not(.cards__person) {
       color: var(--color-blue-900);
     }
 
@@ -41,6 +41,19 @@
   &__text {
     font-size: 16px;
     line-height: 1.6;
+  }
+
+  &__person,
+  &__position {
+    color: var(--color-dark);
+  }
+
+  &__position {
+    margin-bottom: 8px;
+    font-weight: var(--fw-600);
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.02em;
   }
 
   &--three {
@@ -108,6 +121,17 @@
     #{$root}__name {
       line-height: 1.2;
       letter-spacing: 0;
+    }
+  }
+
+  &--shadow {
+    #{$root}__item {
+      border: none;
+      box-shadow: var(--shadow-primary);
+    }
+
+    #{$root}__content {
+      text-align: left;
     }
   }
 }

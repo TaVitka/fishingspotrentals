@@ -72,6 +72,7 @@ body {
   padding: clamp(16px, 2.4vw, 34px) clamp(10px, 2.3vw, 32px);
   background-color: var(--color-white);
   border-radius: var(--radius-main);
+  box-shadow: var(--shadow-blue);
 
   & > *:not(:nth-last-child(2), :last-child) {
     margin-bottom: 16px;
