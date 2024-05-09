@@ -9,3 +9,8 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+@mixin auto-background {
+  background-position: center;
+  background-repeat: no-repeat;
+}

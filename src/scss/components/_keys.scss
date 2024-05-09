@@ -1,0 +1,53 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.keys {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: clamp(32px, 4.5vw, 64px) 32px;
+
+  &__item {
+    position: relative;
+    padding-top: 120px;
+    text-align: center;
+
+    &::before {
+      @include auto-background;
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 96px;
+      height: 96px;
+      background-color: var(--color-blue-512);
+      border-radius: var(--radius-m);
+    }
+
+    &--innovation::before {
+      background-image: url("../images/icons/innovation-icon.svg");
+    }
+
+    &--integrity::before {
+      background-image: url("../images/icons/integrity-icon.svg");
+    }
+
+    &--quality::before {
+      background-image: url("../images/icons/quality-icon.svg");
+    }
+
+    &--sustainability::before {
+      background-image: url("../images/icons/sustainability-icon.svg");
+    }
+
+    &--customer::before {
+      background-image: url("../images/icons/customer-icon.svg");
+    }
+
+    &--teamwork::before {
+      background-image: url("../images/icons/teamwork-icon.svg");
+    }
+  }
+}

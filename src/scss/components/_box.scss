@@ -1,0 +1,40 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+.box {
+  @include flex-all-sb;
+  gap: 24px;
+
+  &__content {
+    max-width: 596px;
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: clamp(26px, 3.4vi, 48px);
+  }
+
+  &__items {
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: 32px;
+      }
+
+      p {
+        display: inline;
+        line-height: 1.6;
+        color: var(--color-blue-700);
+      }
+
+      span {
+        font-weight: var(--fw-700);
+        color: var(--color-blue-400);
+      }
+    }
+  }
+
+  img {
+    border-radius: var(--radius-m);
+  }
+}

@@ -20,7 +20,8 @@
   }
 
   &--discover,
-  &--master {
+  &--master,
+  &--team {
     #{$root}__title {
       font-size: clamp(26px, 3.4vi, 48px);
     }
@@ -37,6 +38,21 @@
 
     #{$root}__title {
       color: var(--color-white);
+    }
+  }
+
+  &--journey {
+    padding: clamp(34px, 5.3vw, 78px) 0;
+  }
+
+  &--values {
+    background-color: var(--color-blue-50);
+  }
+
+  &--team {
+    padding-bottom: clamp(34px, 7.4vw, 108px);
+    #{$root}__info {
+      margin-bottom: clamp(24px, 4.5vw, 64px)
     }
   }
 }

@@ -3,7 +3,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+.title {
   font-weight: var(--fw-600);
   overflow: hidden;
 
@@ -28,7 +29,8 @@ h2 {
   color: var(--color-dark);
 }
 
-h3 {
+h3,
+.title {
   font-size: clamp(20px, 2vi, 24px);
   line-height: 1.5;
   letter-spacing: 0.02em;
